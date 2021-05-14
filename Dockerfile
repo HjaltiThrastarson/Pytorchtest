@@ -9,6 +9,7 @@ RUN export CMAKE_PREFIX_PATH="$(dirname $(which conda))/../"
 RUN conda install -y numpy pyyaml mkl setuptools cmake cffi
 RUN conda install -y pytorch torchvision -c pytorch
 RUN conda install -y jupyter matplotlib scikit-learn nltk bokeh scikit-image
+RUN conda install -y pandas
 
 RUN apt-get update -y && \
 		apt-get install -y --no-install-recommends \
